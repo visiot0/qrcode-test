@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Qr code screen test 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={250}
+    bbWidth={250}
+    focusable={false}
+    height={250}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 250,
+          "width": 250,
+        },
+      ]
+    }
+    vbHeight={250}
+    vbWidth={250}
+    width={250}
+  >
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              0,
+              -65536,
+              1,
+              -16711681,
+            ]
+          }
+          gradientTransform={null}
+          gradientUnits={0}
+          name="grad"
+          x1="0%"
+          x2="100%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGGroup>
+        <RNSVGRect
+          fill={4294967295}
+          height={250}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          width={250}
+          x={-0}
+          y={-0}
+        />
+      </RNSVGGroup>
+      <RNSVGGroup>
+        <RNSVGPath
+          d="M0 5 L70 5 M120 5 L150 5 M160 5 L170 5 M180 5 L250 5 M0 15 L10 15 M60 15 L70 15 M80 15 L130 15 M140 15 L170 15 M180 15 L190 15 M240 15 L250 15 M0 25 L10 25 M20 25 L50 25 M60 25 L70 25 M90 25 L100 25 M120 25 L150 25 M180 25 L190 25 M200 25 L230 25 M240 25 L250 25 M0 35 L10 35 M20 35 L50 35 M60 35 L70 35 M90 35 L100 35 M130 35 L160 35 M180 35 L190 35 M200 35 L230 35 M240 35 L250 35 M0 45 L10 45 M20 45 L50 45 M60 45 L70 45 M80 45 L90 45 M120 45 L130 45 M140 45 L160 45 M180 45 L190 45 M200 45 L230 45 M240 45 L250 45 M0 55 L10 55 M60 55 L70 55 M90 55 L100 55 M110 55 L120 55 M130 55 L140 55 M150 55 L160 55 M180 55 L190 55 M240 55 L250 55 M0 65 L70 65 M80 65 L90 65 M100 65 L110 65 M120 65 L130 65 M140 65 L150 65 M160 65 L170 65 M180 65 L250 65 M100 75 L110 75 M120 75 L170 75 M0 85 L10 85 M20 85 L30 85 M40 85 L50 85 M60 85 L70 85 M90 85 L100 85 M110 85 L120 85 M140 85 L150 85 M160 85 L170 85 M200 85 L210 85 M230 85 L240 85 M10 95 L20 95 M50 95 L60 95 M90 95 L110 95 M120 95 L130 95 M140 95 L150 95 M160 95 L200 95 M210 95 L250 95 M10 105 L20 105 M30 105 L50 105 M60 105 L70 105 M80 105 L90 105 M120 105 L140 105 M180 105 L250 105 M0 115 L60 115 M70 115 L80 115 M90 115 L110 115 M120 115 L130 115 M160 115 L180 115 M190 115 L200 115 M230 115 L240 115 M50 125 L100 125 M120 125 L130 125 M150 125 L190 125 M210 125 L220 125 M10 135 L60 135 M70 135 L80 135 M90 135 L100 135 M110 135 L140 135 M160 135 L170 135 M210 135 L220 135 M230 135 L250 135 M0 145 L10 145 M30 145 L80 145 M90 145 L100 145 M110 145 L130 145 M140 145 L150 145 M180 145 L190 145 M200 145 L220 145 M230 145 L250 145 M10 155 L60 155 M80 155 L110 155 M120 155 L150 155 M190 155 L200 155 M210 155 L220 155 M230 155 L240 155 M0 165 L10 165 M30 165 L40 165 M60 165 L80 165 M90 165 L100 165 M110 165 L120 165 M140 165 L150 165 M160 165 L210 165 M230 165 L250 165 M80 175 L100 175 M110 175 L120 175 M140 175 L170 175 M200 175 L220 175 M240 175 L250 175 M0 185 L70 185 M90 185 L110 185 M130 185 L140 185 M150 185 L170 185 M180 185 L190 185 M200 185 L210 185 M220 185 L250 185 M0 195 L10 195 M60 195 L70 195 M90 195 L100 195 M110 195 L120 195 M160 195 L170 195 M200 195 L210 195 M0 205 L10 205 M20 205 L50 205 M60 205 L70 205 M80 205 L110 205 M120 205 L130 205 M160 205 L210 205 M240 205 L250 205 M0 215 L10 215 M20 215 L50 215 M60 215 L70 215 M90 215 L100 215 M110 215 L140 215 M150 215 L160 215 M190 215 L230 215 M0 225 L10 225 M20 225 L50 225 M60 225 L70 225 M80 225 L90 225 M100 225 L130 225 M140 225 L150 225 M160 225 L190 225 M200 225 L230 225 M240 225 L250 225 M0 235 L10 235 M60 235 L70 235 M120 235 L180 235 M200 235 L210 235 M230 235 L240 235 M0 245 L70 245 M80 245 L120 245 M140 245 L150 245 M160 245 L170 245 M200 245 L220 245 M230 245 L250 245 "
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+            ]
+          }
+          stroke={4278190080}
+          strokeLinecap={0}
+          strokeWidth={10}
+        />
+      </RNSVGGroup>
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
