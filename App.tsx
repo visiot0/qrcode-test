@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { TextInput, Pressable, StyleSheet, Text } from "react-native";
+import {
+  TextInput,
+  Pressable,
+  StyleSheet,
+  Text,
+  ScrollView,
+} from "react-native";
 import { View } from "react-native";
 import SplashScreen from "react-native-splash-screen";
 import { Divider } from "components";
-import QRCode from "components/QrCode";
 import { stringToImageURL } from "helpers/textToQrCode";
+import Clipboard from "@react-native-clipboard/clipboard";
 
 const App = () => {
   const [qr, setQr] = useState("");
+  const [base64, setBase64] = useState("");
   useEffect(() => {
     SplashScreen.hide();
   }, []);
@@ -24,16 +31,26 @@ const App = () => {
         <Divider size={25} />
       </View>
       <Divider />
-      <View style={localStyles.qrContainer}>
-        {qr ? <QRCode qr={qr} ecl="L" /> : null}
-      </View>
       <Pressable
         onPress={async () => {
-          console.log(await stringToImageURL("FUNCTION"));
+          setBase64(await stringToImageURL(qr));
         }}
       >
-        <Text>TEST</Text>
+        <Text>Generisi QR Code</Text>
       </Pressable>
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={{ flexGrow: 1 }}
+        keyboardShouldPersistTaps="always"
+      >
+        <Pressable
+          onPress={() => {
+            Clipboard.setString(base64);
+          }}
+        >
+          <Text>{base64}</Text>
+        </Pressable>
+      </ScrollView>
     </View>
   );
 };
@@ -43,6 +60,7 @@ const localStyles = StyleSheet.create({
     backgroundColor: "gray",
     flex: 1,
     padding: 20,
+    alignItems: "center",
   },
   textInputContainer: {
     height: 100,

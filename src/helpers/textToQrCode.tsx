@@ -1,11 +1,10 @@
-import QRCode from "qrcode";
-import { encode as btoa } from "base-64";
+import { Encoder, ErrorCorrectionLevel, QRByte } from "@nuintun/qrcode";
 
 export const stringToImageURL = async (str: string) => {
-  let res = await QRCode.toString(str, {
-    type: "utf8",
-    errorCorrectionLevel: "L",
-    width: 100,
+  const qrcodeEncoder = new Encoder({
+    errorCorrectionLevel: ErrorCorrectionLevel.L,
   });
-  return "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(res)));
+  qrcodeEncoder.write(new QRByte(str));
+  qrcodeEncoder.make();
+  return qrcodeEncoder.toDataURL(10);
 };
