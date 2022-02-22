@@ -5,8 +5,9 @@ import {
   StyleSheet,
   Text,
   ScrollView,
+  Alert,
+  View
 } from "react-native";
-import { View } from "react-native";
 import SplashScreen from "react-native-splash-screen";
 import { Divider } from "components";
 import { stringToImageURL } from "helpers/textToQrCode";
@@ -28,16 +29,17 @@ const App = () => {
           placeholder="Add value"
           style={localStyles.textInput}
         />
-        <Divider size={25} />
       </View>
-      <Divider />
       <Pressable
+        style={localStyles.btn}
         onPress={async () => {
           setBase64(await stringToImageURL(qr));
         }}
       >
         <Text>Generisi QR Code</Text>
       </Pressable>
+      <Text>NOTE: Pritiskom na base64 string isti će biti kopiran u vaš clipboard.</Text>
+      <Divider/>
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={{ flexGrow: 1 }}
@@ -46,6 +48,9 @@ const App = () => {
         <Pressable
           onPress={() => {
             Clipboard.setString(base64);
+            setBase64("")
+            setQr("")
+            Alert.alert("BASE64 copied!")
           }}
         >
           <Text>{base64}</Text>
@@ -56,8 +61,9 @@ const App = () => {
 };
 
 const localStyles = StyleSheet.create({
+  btn: {backgroundColor:'lightgray', borderRadius: 7, padding: 8},
   container: {
-    backgroundColor: "gray",
+    backgroundColor: "#EFEFEF",
     flex: 1,
     padding: 20,
     alignItems: "center",
