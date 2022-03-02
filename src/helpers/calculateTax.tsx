@@ -14,7 +14,7 @@ interface CalculatedTaxList {
   quantity: number;
 }
 
-interface FinalTaxListItem {
+export interface FinalTaxListItem {
   categoryType: number | string;
   label: string;
   amount: number;

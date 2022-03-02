@@ -1,7 +1,8 @@
-import { calculateTax } from "helpers/calculateTax";
-import React, { useEffect } from "react";
-import { View, Text, Pressable } from "react-native";
+import { calculateTax, FinalTaxListItem } from "helpers/calculateTax";
+import React, { useEffect, useState } from "react";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import dataJson from "./data.json";
+import { Divider } from "components";
 
 export interface TaxItemInterface {
   name: string;
@@ -57,17 +58,30 @@ const stavkeRacuna: InvoiceItemRequestInterface[] = [
 ];
 
 const TaxCalculator = () => {
+  const [tax, setTax] = useState<FinalTaxListItem[]>([]);
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View style={styles.container}>
       <Pressable
+        style={styles.btn}
         onPress={() => {
-          console.log(calculateTax(listaPoreza, stavkeRacuna));
+          setTax(calculateTax(listaPoreza, stavkeRacuna));
         }}
       >
         <Text>Izracunaj</Text>
       </Pressable>
+      <Divider />
+      <Text>{JSON.stringify(tax)}</Text>
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "gray",
+    flex: 1,
+    padding: 20,
+    alignItems: "center",
+  },
+  btn: { backgroundColor: "lightgray", borderRadius: 7, padding: 8 },
+});
 export default TaxCalculator;

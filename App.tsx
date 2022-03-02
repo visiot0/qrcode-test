@@ -1,8 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
-import QrGenerator from "screens/QrGenerator";
-import TaxCalculator from "screens/TaxCalculator";
+import React, { useEffect } from "react";
 import SplashScreen from "react-native-splash-screen";
+import TaxCalculator from "screens/TaxCalculator";
 
 const App = () => {
   useEffect(() => {
