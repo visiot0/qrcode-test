@@ -26,8 +26,15 @@ export interface InvoiceItemRequestInterface {
   TotalAmount: number;
 }
 
-const stavkeRacuna: InvoiceItemRequestInterface[] = [{"Name":"Item0","Quantity":51.767,"UnitPrice":536.22,"Labels":["F","N","A","C"],"TotalAmount":27758.5},{"Name":"Item1","Quantity":93.688,"UnitPrice":520.64,"Labels":["F"],"TotalAmount":48777.72},{"Name":"Item2","Quantity":5.691,"UnitPrice":547.23,"Labels":["F","N","P","T","B","Ж","C"],"TotalAmount":3114.29},{"Name":"Item3","Quantity":24.724,"UnitPrice":656.35,"Labels":["F","E","T","A"],"TotalAmount":16227.6}]
-
+const stavkeRacuna: InvoiceItemRequestInterface[] = [
+  {
+    Name: "Item0",
+    Quantity: 50.913,
+    UnitPrice: 666.02,
+    Labels: ["E", "T"],
+    TotalAmount: 33909.08,
+  },
+];
 
 const TaxCalculator = () => {
   const [tax, setTax] = useState<FinalTaxListItem[]>([]);
