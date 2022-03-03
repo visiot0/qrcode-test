@@ -3,6 +3,9 @@ import {
   TaxItemInterface,
 } from "screens/TaxCalculator";
 
+
+import bigDecimal from 'js-big-decimal'
+
 interface CalculatedTaxList {
   categoryType: number | string;
   label: string;
@@ -33,8 +36,10 @@ const calculateTax = (
     const findItemIndex = finalTaxListArray.findIndex(
       (e) => e.label == taxItem.label
     );
+
     if (findItemIndex != -1) {
-      finalTaxListArray[findItemIndex].amount += taxItem.amount;
+      const tempAmount = Number(bigDecimal.round(finalTaxListArray[findItemIndex].amount+taxItem.amount, 4, 5))
+      finalTaxListArray[findItemIndex].amount = tempAmount;
     } else {
       const finalTaxItem: FinalTaxListItem = {
         categoryType: taxItem.categoryType,
@@ -78,6 +83,7 @@ const calculateTax = (
 
   for (let i = 0; i < calculatedTaxList.length; i++) {
     // daje zbir svih rateove itema
+
     let totalRate = calculatedTaxList.reduce(
       (total, curr) =>
         total +
@@ -99,39 +105,30 @@ const calculateTax = (
 
     switch (calculatedTaxList[i].categoryType) {
       case 0:
-        calculatedTaxList[i].amount = parseFloat(
-          (
-            (calculatedTaxList[i].total / (1 + sumOnTotalRates / 100)) *
-            (calculatedTaxList[i].rate / (100 + totalRate))
-          ).toFixed(4)
-        );
+        const cat0Amount = bigDecimal.round(((calculatedTaxList[i].total / (1 + sumOnTotalRates / 100)) * (calculatedTaxList[i].rate / (100 + totalRate))), 4, 5)
+        calculatedTaxList[i].amount = Number(cat0Amount)
+
+       // calculatedTaxList[i].amount = ((calculatedTaxList[i].total / (1 + sumOnTotalRates / 100)) * (calculatedTaxList[i].rate / (100 + totalRate)))
         updateFinalTaxList(calculatedTaxList[i]);
 
         break;
       case 1:
-        calculatedTaxList[i].amount = parseFloat(
-          (
-            (calculatedTaxList[i].total / (1 + totalRate / 100)) *
-            (calculatedTaxList[i].rate / 100)
-          ).toFixed(4)
-        );
+        const cat1Amount = bigDecimal.round(((calculatedTaxList[i].total / (1 + totalRate / 100)) * (calculatedTaxList[i].rate / 100)), 4, 5);
+        calculatedTaxList[i].amount = Number(cat1Amount);
 
         updateFinalTaxList(calculatedTaxList[i]);
         break;
       case 2:
-        let itmTotal = parseFloat(
-          (
-            calculatedTaxList[i].total -
-            (calculatedTaxList[i].total -
-              calculatedTaxList[i].rate * calculatedTaxList[i].quantity)
-          ).toFixed(4)
-        );
-        calculatedTaxList[i].amount = itmTotal;
+        let cat2Amount = bigDecimal.round((calculatedTaxList[i].total -(calculatedTaxList[i].total -calculatedTaxList[i].rate * calculatedTaxList[i].quantity)), 4, 5)
+        
+        calculatedTaxList[i].amount = Number(cat2Amount);
 
         updateFinalTaxList(calculatedTaxList[i]);
         break;
     }
   }
+  console.log("== FINAL TAX ARRAY ==")
+  console.log(finalTaxListArray)
   return finalTaxListArray;
 };
 
