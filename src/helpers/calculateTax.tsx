@@ -127,8 +127,7 @@ const calculateTax = (
         break;
     }
   }
-  console.log("== FINAL TAX ARRAY ==")
-  console.log(finalTaxListArray)
+
   return finalTaxListArray;
 };
 

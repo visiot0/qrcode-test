@@ -15,10 +15,9 @@ interface QrCodeRef {
 const QrCodeComp = ({ qr, ecl }: Props) => {
   const qrRef = useRef<QrCodeRef>();
   const getStr = () => {
-    console.log("CURRENT", qrRef.current);
     //Stavio bih odgovarajuci tip, ali ulazio sam u paketic i tamo je tip any
     qrRef.current?.toDataURL((data) => {
-      console.log("DATA", "data:image/gif;base64,", data);
+     // console.log("DATA", "data:image/gif;base64,", data);
     });
   };
   return (
