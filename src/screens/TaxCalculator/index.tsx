@@ -1,4 +1,4 @@
-import { calculateTax, FinalTaxListItem } from "helpers/calculateTax";
+import { calculateTax, InvoiceTax, ListOfTaxLists } from "helpers/calculateTax";
 import React, { useEffect, useState } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import dataJson from "./data.json";
@@ -15,7 +15,7 @@ export interface TaxRateInterface {
   rate: number;
   label: string;
 }
-const listaPoreza: TaxItemInterface[] = dataJson;
+const listaPoreza: ListOfTaxLists[] = dataJson;
 
 export interface InvoiceItemRequestInterface {
   Gtin?: string;
@@ -26,24 +26,16 @@ export interface InvoiceItemRequestInterface {
   TotalAmount: number;
 }
 
-const stavkeRacuna: InvoiceItemRequestInterface[] = [
-  {
-    Name: "Item0",
-    Quantity: 50.913,
-    UnitPrice: 666.02,
-    Labels: ["E", "T"],
-    TotalAmount: 33909.08,
-  },
-];
+const stavkeRacuna: InvoiceItemRequestInterface[] =[{"Name":"Item0","Quantity":81.855,"UnitPrice":267.31,"Labels":["N","T","A"],"TotalAmount":21880.66},{"Name":"Item1","Quantity":78.522,"UnitPrice":10.75,"Labels":["E","Ж"],"TotalAmount":844.11},{"Name":"Item2","Quantity":77.918,"UnitPrice":184.78,"Labels":["F","N","E","T"],"TotalAmount":14397.69}]
 
 const TaxCalculator = () => {
-  const [tax, setTax] = useState<FinalTaxListItem[]>([]);
+  const [tax, setTax] = useState<InvoiceTax>();
   return (
     <View style={styles.container}>
       <Pressable
         style={styles.btn}
         onPress={() => {
-          setTax(calculateTax(listaPoreza, stavkeRacuna));
+          setTax(calculateTax(listaPoreza, stavkeRacuna, new Date("2022-03-24T23:00:00Z")));
         }}
       >
         <Text>Izracunaj</Text>

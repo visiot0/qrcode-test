@@ -1,87 +1,267 @@
 [
   {
-    "name": "ECAL",
-    "categoryType": 0,
-    "taxRates": [
+    "validFrom": "2021-12-19T23:00:00Z",
+    "groupId": 5,
+    "taxCategories": [
       {
-        "rate": 11.0,
-        "label": "F"
-      }
-    ],
-    "orderId": 1
-  },
-  {
-    "name": "N-TAX",
-    "categoryType": 0,
-    "taxRates": [
-      {
-        "rate": 0.0,
-        "label": "N"
-      }
-    ],
-    "orderId": 2
-  },
-  {
-    "name": "PBL",
-    "categoryType": 2,
-    "taxRates": [
-      {
-        "rate": 0.5,
-        "label": "P"
-      }
-    ],
-    "orderId": 3
-  },
-  {
-    "name": "STT",
-    "categoryType": 0,
-    "taxRates": [
-      {
-        "rate": 6.0,
-        "label": "E"
-      }
-    ],
-    "orderId": 4
-  },
-  {
-    "name": "TOTL",
-    "categoryType": 1,
-    "taxRates": [
-      {
-        "rate": 2.0,
-        "label": "T"
-      }
-    ],
-    "orderId": 5
-  },
-  {
-    "name": "VAT",
-    "categoryType": 0,
-    "taxRates": [
-      {
-        "rate": 9.0,
-        "label": "A"
+        "name": "ECAL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 11.00,
+            "label": "F"
+          }
+        ],
+        "orderId": 1
       },
       {
-        "rate": 0.0,
-        "label": "B"
+        "name": "N-TAX",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "N"
+          }
+        ],
+        "orderId": 2
       },
       {
-        "rate": 19.0,
-        "label": "Ж"
+        "name": "PBL",
+        "categoryType": 2,
+        "taxRates": [
+          {
+            "rate": 0.50,
+            "label": "P"
+          }
+        ],
+        "orderId": 3
+      },
+      {
+        "name": "STT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 6.00,
+            "label": "E"
+          }
+        ],
+        "orderId": 4
+      },
+      {
+        "name": "TOTL",
+        "categoryType": 1,
+        "taxRates": [
+          {
+            "rate": 2.00,
+            "label": "T"
+          }
+        ],
+        "orderId": 5
+      },
+      {
+        "name": "VAT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 9.00,
+            "label": "A"
+          },
+          {
+            "rate": 0.00,
+            "label": "B"
+          },
+          {
+            "rate": 19.00,
+            "label": "Ж"
+          }
+        ],
+        "orderId": 6
+      },
+      {
+        "name": "VAT-EXCL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "C"
+          }
+        ],
+        "orderId": 7
       }
-    ],
-    "orderId": 6
+    ]
   },
   {
-    "name": "VAT-EXCL",
-    "categoryType": 0,
-    "taxRates": [
+    "validFrom": "2021-07-22T09:55:24Z",
+    "groupId": 2,
+    "taxCategories": [
       {
-        "rate": 0.0,
-        "label": "C"
+        "name": "ECAL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 11.00,
+            "label": "F"
+          }
+        ],
+        "orderId": 1
+      },
+      {
+        "name": "N-TAX",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "N"
+          }
+        ],
+        "orderId": 2
+      },
+      {
+        "name": "PBL",
+        "categoryType": 2,
+        "taxRates": [
+          {
+            "rate": 0.50,
+            "label": "P"
+          }
+        ],
+        "orderId": 3
+      },
+      {
+        "name": "STT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 6.00,
+            "label": "E"
+          }
+        ],
+        "orderId": 4
+      },
+      {
+        "name": "TOTL",
+        "categoryType": 1,
+        "taxRates": [
+          {
+            "rate": 2.00,
+            "label": "T"
+          }
+        ],
+        "orderId": 5
+      },
+      {
+        "name": "VAT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 9.00,
+            "label": "A"
+          },
+          {
+            "rate": 0.00,
+            "label": "B"
+          }
+        ],
+        "orderId": 6
+      },
+      {
+        "name": "VAT-EXCL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "C"
+          }
+        ],
+        "orderId": 7
       }
-    ],
-    "orderId": 7
+    ]
+  },
+  {
+    "validFrom": "2021-07-15T23:08:09Z",
+    "groupId": 1,
+    "taxCategories": [
+      {
+        "name": "ECAL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 10.00,
+            "label": "F"
+          }
+        ],
+        "orderId": 1
+      },
+      {
+        "name": "N-TAX",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "N"
+          }
+        ],
+        "orderId": 2
+      },
+      {
+        "name": "PBL",
+        "categoryType": 2,
+        "taxRates": [
+          {
+            "rate": 0.50,
+            "label": "P"
+          }
+        ],
+        "orderId": 3
+      },
+      {
+        "name": "STT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 6.00,
+            "label": "E"
+          }
+        ],
+        "orderId": 4
+      },
+      {
+        "name": "TOTL",
+        "categoryType": 1,
+        "taxRates": [
+          {
+            "rate": 2.00,
+            "label": "T"
+          }
+        ],
+        "orderId": 5
+      },
+      {
+        "name": "VAT",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 9.00,
+            "label": "A"
+          },
+          {
+            "rate": 0.00,
+            "label": "B"
+          }
+        ],
+        "orderId": 6
+      },
+      {
+        "name": "VAT-EXCL",
+        "categoryType": 0,
+        "taxRates": [
+          {
+            "rate": 0.00,
+            "label": "C"
+          }
+        ],
+        "orderId": 7
+      }
+    ]
   }
-]
+ ]
